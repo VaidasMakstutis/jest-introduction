@@ -45,4 +45,23 @@ describe("Calculator tests", () => {
     expect(2 * 2).toBe(4);
     expect(4 - 2).not.toBe(1);
   });
+
+  test("truthy operators", () => {
+    let name = "Software testing help";
+    let n = null;
+    expect(n).toBeNull();
+    expect(name).not.toBeNull;
+
+    // name has a valid value
+    expect(name).toBeTruthy();
+
+    // fail - as null is non success
+    expect(n).toBeTruthy();
+
+    // pass - null treated as false or negative
+    expect(n).toBeFalsy();
+
+    // 0 - treated as false
+    expect(0).toBeFalsy();
+  });
 });
