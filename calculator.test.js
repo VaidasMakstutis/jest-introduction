@@ -79,4 +79,14 @@ describe("Calculator tests", () => {
     // greater than or equal
     expect(num3).toBeGreaterThanOrEqual(0);
   });
+
+  test("string matchers", () => {
+    let string1 = "software testing help - a great resource for testers";
+
+    // test for success match
+    expect(string1).toMatch(/test/);
+
+    // test for failure match
+    expect(string1).not.toMatch(/abc/);
+  });
 });
