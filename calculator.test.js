@@ -64,4 +64,19 @@ describe("Calculator tests", () => {
     // 0 - treated as false
     expect(0).toBeFalsy();
   });
+
+  test("numeric operators", () => {
+    let num1 = 100;
+    let num2 = -20;
+    let num3 = 0;
+
+    // greater than
+    expect(num1).toBeGreaterThan(10);
+
+    // less than or equal
+    expect(num2).toBeLessThanOrEqual(0);
+
+    // greater than or equal
+    expect(num3).toBeGreaterThanOrEqual(0);
+  });
 });
